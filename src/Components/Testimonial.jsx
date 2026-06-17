@@ -2,7 +2,7 @@ import React from 'react';
 // Import Swiper React components and modules
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/pagination';
+// import 'swiper/css/pagination';
 
 import { Autoplay, Pagination } from 'swiper/modules';
 
@@ -13,7 +13,7 @@ export default function Testimonial() {
     slidesPerView: 1, // 1 review on mobile
     loop: true,
     autoplay: {
-      delay: 3500,
+      delay: 2000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -21,10 +21,10 @@ export default function Testimonial() {
     },
     breakpoints: {
       768: {
-        slidesPerView: 2, // 2 reviews on tablets/desktops
-      },
+        slidesPerView: 2, 
+           },
       1024: {
-        slidesPerView: 3, // 3 reviews on larger screens if you have many
+        slidesPerView: 3, 
       }
     },
   };
@@ -39,7 +39,7 @@ export default function Testimonial() {
       <div className="testimonial-carousel">
         <Swiper modules={[Autoplay, Pagination]} {...testimonialOptions}>
           
-          {/* --- REVIEW 1 --- */}
+    
           <SwiperSlide>
             <div className="testimonial-item bg-light p-4 rounded">
               <div className="d-flex align-items-center mb-3">
@@ -53,7 +53,7 @@ export default function Testimonial() {
             </div>
           </SwiperSlide>
 
-          {/* --- REVIEW 2 --- */}
+        
           <SwiperSlide>
             <div className="testimonial-item bg-light p-4 rounded">
               <div className="d-flex align-items-center mb-3">
@@ -66,13 +66,11 @@ export default function Testimonial() {
               <p className="mb-0 italic">"Excellent service! The Toyota Corolla Cross was perfect for our week-long road trip. Highly recommended."</p>
             </div>
           </SwiperSlide>
-
-          {/* Add more <SwiperSlide> items as needed */}
           
         </Swiper>
       </div>
     </div>
-  );
+  )
 }
 
 
